@@ -1,8 +1,5 @@
 # SourceKnowledge tracking template
-This is an official SourceKnowledge tracking script template for google tag manager.
-
-# Details
-Provides options to add:
+This is an official SourceKnowledge tracking script template for google tag manager. It Provides options to add:
 * Account/Advertiser ID (required)
 * Product IDs
 * Order ID (required for sales confirmation)
