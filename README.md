@@ -25,6 +25,9 @@ dataLayer.push({
 'productIdList' : ['ProductID_1', 'ProductID_2', 'ProductID_3']
 });
 </script>
+<!-- Google Tag Manager -->
+  	...
+<!-- End Google Tag Manager -->
 ```
 Note: You can ommit the productIdList if there are no products on the page
 
@@ -38,6 +41,9 @@ dataLayer.push({
 'productIdList' : ['ProductID_1', 'ProductID_2', 'ProductID_3']
 });
 </script>
+<!-- Google Tag Manager -->
+  	...
+<!-- End Google Tag Manager -->
 ```
 ### For Sales Confirmation
 Note: You can ommit the productIdList if there are no products info but orderId and orderAmount are mandatory
@@ -51,6 +57,9 @@ dataLayer.push({
 'orderAmount' : '50',
 });
 </script>
+<!-- Google Tag Manager -->
+  	...
+<!-- End Google Tag Manager -->
 ```
 
 ## 2. Tag Configuration - Choose Variables
