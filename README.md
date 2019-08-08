@@ -55,6 +55,7 @@ dataLayer.push({
 <!-- End Google Tag Manager -->
 ```
 _Note_: You can ommit the productIdList if there are no products but orderId and orderAmount are mandatory for a sale confirmation.
+
 More Information about dataLayer: https://support.google.com/tagmanager/answer/6164391?hl=en
 ### 3. Tag Configuration - Choose Variables
 To create the variable in GTM, click on the Variables tab. 
@@ -64,6 +65,7 @@ Create a constant type GTM variable with value as your accout or advertiser id a
 Create a data layer GTM variable. Input `orderId` defined in step 1 as `Data Layer Variable Name`. Select this variable for Account Id field. Follow this for other variables. 
 ### 4. Tag Configuration - Setup the Trigger
 Under `Triggering` choose the correct trigger type for the pixel such as all pages, cart page, conversion event, etc. Then click save.
+
 More Information: https://support.google.com/tagmanager/topic/7679384?hl=en&ref_topic=3441647
 ### 5. Preview & Publish
 Click on the preview button to test and preview this tag before setting it live. If the tag successfully fired publish the new changes to the workflow.
