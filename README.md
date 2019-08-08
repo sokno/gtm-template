@@ -28,7 +28,7 @@ dataLayer.push({
   	...
 <!-- End Google Tag Manager -->
 ```
-Note: You can ommit the productIdList if there are no products on the page
+_Note:_ You can ommit the productIdList if there are no products on the page
 #### For Cart
 ```
 <script type="text/javascript">
@@ -57,7 +57,7 @@ dataLayer.push({
   	...
 <!-- End Google Tag Manager -->
 ```
-Note: You can ommit the productIdList if there are no products info but orderId and orderAmount are mandatory
+_Note_: You can ommit the productIdList if there are no products but orderId and orderAmount are mandatory
 ### 3. Tag Configuration - Choose Variables
 To create the variable in GTM, click on the Variables tab. 
 #### Account Id
