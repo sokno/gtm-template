@@ -37,7 +37,8 @@ ___TEMPLATE_PARAMETERS___
     "type": "TEXT"
   },
   {
-    "macrosInSelect": true,
+    "help": "Variable should return 'Lead', 'Cart' or 'Sale' based on the page type.",
+    "macrosInSelect": false,
     "selectItems": [
       {
         "displayValue": "Lead / Home Page",
@@ -52,16 +53,15 @@ ___TEMPLATE_PARAMETERS___
         "value": "Sale"
       }
     ],
-    "displayName": "Page Type",
-    "simpleValueType": true,
-    "name": "fldPageType",
-    "type": "SELECT",
-    "help": "Variable should return 'Lead', 'Cart' or 'Sale' based on the page type.",
     "valueValidators": [
       {
         "type": "NON_EMPTY"
       }
-    ]
+    ],
+    "displayName": "Page Type",
+    "simpleValueType": true,
+    "name": "fldPageType",
+    "type": "SELECT"
   },
   {
     "help": "Select the GTM Variable that returns the product ID(s) of the current page or in the cart. An Array Object e.g ['ProductID_1', 'ProductID_2', 'ProductID_3']. You may need to create a GTM variable, if it does not exist.",
@@ -146,7 +146,7 @@ ___WEB_PERMISSIONS___
             "listItem": [
               {
                 "type": 1,
-                "string": "https://*.provenpixel.com/adpx.php*"
+                "string": "https://*.citeeze.com/adpx.php*"
               }
             ]
           }
@@ -183,7 +183,7 @@ let uriCompOAm = data.fldOrderAmount ? '&order_amount=' + encodeUriComponent(dat
 let uriCb      = '&cb=' + generateRandom(1, 999999);
 
 //assemble tag
-let url = 'https://upx.provenpixel.com/adpx.php?clid=' + data.fldAccountId + uriPt + uriComP;     
+let url = 'https://lg.azhar-9.citeeze.com/adpx.php?clid=' + data.fldAccountId + uriPt + uriComP;     
 if (data.fldPageType === 'Sale')
 {
   url += uriCompOid + uriCompOAm + uriCb;
