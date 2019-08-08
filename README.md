@@ -17,7 +17,6 @@ The Data layer is a javascript code snippet used to send information to Google T
 <script type="text/javascript">
 var dataLayer = dataLayer || [];
 dataLayer.push({
-'pageType':'Lead',
 'productIdList' : ['ProductID_1', 'ProductID_2', 'ProductID_3']
 });
 </script>
@@ -44,7 +43,6 @@ dataLayer.push({
 <script type="text/javascript">
 var dataLayer = dataLayer || [];
 dataLayer.push({
-'pageType':'Sale',
 'productIdList' : ['ProductID_1', 'ProductID_2', 'ProductID_3'],
 'orderId' : 'uq_order_id',
 'orderAmount' : '50',
@@ -59,8 +57,8 @@ _Note_: You can ommit the productIdList if there are no products but orderId and
 More Information about dataLayer: https://support.google.com/tagmanager/answer/6164391?hl=en
 ### 3. Tag Configuration - Choose Variables
 To create the variable in GTM, click on the Variables tab. 
-#### Account Id
-Create a constant type GTM variable with value as your accout or advertiser id and give it a name e.g. AccountId. Select this variable for Account Id field. 
+#### Account Id and Page Type
+Create a constant type GTM variable with value as your accout or advertiser id and give it a name e.g. AccountId. Select this variable for Account Id field. Then select the Page Type from the drop down list.
 #### Data Layer Variables e.g. Order Id
 Create a data layer GTM variable. Input `orderId` defined in step 1 as `Data Layer Variable Name`. Select this variable for Account Id field. Follow this for other variables. 
 ### 4. Tag Configuration - Setup the Trigger
