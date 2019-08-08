@@ -1,10 +1,5 @@
-# SourceKnowledge tracking script
+# SourceKnowledge tracking template
 This is an official SourceKnowledge tracking script template for google tag manager.
-
-# Release notes
-| Date | Notes |
-|------|-------|
-| 06 Aug 2019 | First version |
 
 # Details
 Provides options to add:
@@ -15,8 +10,8 @@ Provides options to add:
 
 # Integration Guide
 ### 1. Create Custom Template
-Download template.tpl file and log into Google Tag Manager. Under templates tab -> New, import template.tpl file and save this template by giving a name e.g. SourceKnowledge Tag.
-Goto Tags tab -> New -> Tag Configuration and select `SourceKnowledge Tag` template.
+Download template.tpl file and log into Google Tag Manager. Goto `Templates` tab -> `New` -> `Import` template.tpl file and save this template by giving a name e.g. SourceKnowledge Tag.
+Goto `Tags` tab -> `New` -> `Tag Configuration` and select `SourceKnowledge Tag` template.
 
 ### 2. Create Data Layer
 The Data layer is a javascript code snippet used to send information to Google Tag Manager. This snippet should be placed directly on your website just before the GTM container snippet. E.g. 
