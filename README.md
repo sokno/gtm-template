@@ -16,7 +16,7 @@ Provides options to add:
 # Integration Guide
 ### 1. Create Custom Template
 Download template.tpl file and log into Google Tag Manager. Under templates tab -> New, import template.tpl file and save this template by giving a name e.g. SourceKnowledge Tag.
-Goto Tags tab -> New -> Tag Configuration and select `SourceKnowledge Tag` tag template.
+Goto Tags tab -> New -> Tag Configuration and select `SourceKnowledge Tag` template.
 
 ### 2. Create Data Layer
 The Data layer is a javascript code snippet used to send information to Google Tag Manager. This snippet should be placed directly on your website just before the GTM container snippet. E.g. 
