@@ -10,8 +10,8 @@ Provides options to add:
 
 # Integration Guide
 ### 1. Create Custom Template
-Download template.tpl file and log into Google Tag Manager. Goto `Templates` tab -> `New` -> `Import` template.tpl file and save this template by giving a name e.g. SourceKnowledge Tag.
-Goto `Tags` tab -> `New` -> `Tag Configuration` and select `SourceKnowledge Tag` template.
+a. Download template.tpl file and log into Google Tag Manager. Goto `Templates` tab -> `New` -> `Import` template.tpl file and save this template by giving a name e.g. SourceKnowledge Tag.
+b. Goto `Tags` tab -> `New` -> `Tag Configuration` and select `SourceKnowledge Tag` template.
 
 ### 2. Create Data Layer
 The Data layer is a javascript code snippet used to send information to Google Tag Manager. This snippet should be placed directly on your website just before the GTM container snippet. E.g. 
@@ -28,7 +28,7 @@ dataLayer.push({
   	...
 <!-- End Google Tag Manager -->
 ```
-_Note:_ You can ommit the productIdList if there are no products on the page
+_Note:_ You can ommit the productIdList if there are no products on the page.
 #### For Cart
 ```
 <script type="text/javascript">
@@ -57,7 +57,7 @@ dataLayer.push({
   	...
 <!-- End Google Tag Manager -->
 ```
-_Note_: You can ommit the productIdList if there are no products but orderId and orderAmount are mandatory
+_Note_: You can ommit the productIdList if there are no products but orderId and orderAmount are mandatory for a sale confirmation.
 ### 3. Tag Configuration - Choose Variables
 To create the variable in GTM, click on the Variables tab. 
 #### Account Id
@@ -65,7 +65,7 @@ Create a constant type GTM variable with value as your accout or advertiser id a
 #### Data Layer Variables e.g. Order Id
 Create a data layer GTM variable. Input `orderId` defined in step 1 as `Data Layer Variable Name`. Select this variable for Account Id field. Follow this for other variables. 
 ### 4. Tag Configuration - Setup the Trigger
-Specify when the SourceKnowledge tag should be fired on your website. Click on the triggers tab under the current workspace to create the trigger.
+Under `Triggering` choose the correct trigger type for the pixel such as all pages, cart page, conversion event, etc. Then click save.
 ### 5. Preview & Publish
 Click on the preview button to test and preview this tag before setting it live. If the tag successfully fired publish the new changes to the workflow.
 
