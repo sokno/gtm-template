@@ -24,7 +24,7 @@ dataLayer.push({
   	...
 <!-- End Google Tag Manager -->
 ```
-_Note:_ You can ommit the productIdList if there are no products on the page.
+
 #### For Cart
 ```
 <script type="text/javascript">
@@ -52,7 +52,6 @@ dataLayer.push({
   	...
 <!-- End Google Tag Manager -->
 ```
-_Note_: You can ommit the productIdList if there are no products but orderId and orderAmount are mandatory for a sale confirmation.
 
 More Information about dataLayer: https://support.google.com/tagmanager/answer/6164391?hl=en
 ### 3. Tag Configuration - Choose Variables
