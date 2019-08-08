@@ -65,7 +65,7 @@ Create a constant type GTM variable with value as your accout or advertiser id a
 #### Data Layer Variables e.g. Order Id
 Create a data layer GTM variable. Input `orderId` defined in step 1 as `Data Layer Variable Name`. Select this variable for Account Id field. Follow this for other variables. 
 ### 4. Tag Configuration - Setup the Trigger
-Specify when the SoourceKnowledge tag should be fired on your website. Click on the triggers tab under the current workspace to create the trigger.
+Specify when the SourceKnowledge tag should be fired on your website. Click on the triggers tab under the current workspace to create the trigger.
 ### 5. Preview & Publish
 Click on the preview button to test and preview this tag before setting it live. If the tag successfully fired publish the new changes to the workflow.
 
