@@ -1,7 +1,7 @@
-﻿___INFO___
+___INFO___
 
 {
-  "displayName": "SourceKnowledge Tag",
+  "displayName": "SourceKnowledge Tracking",
   "description": "SourceKnowledge tag allows us to track what visitors to your website are doing.",
   "securityGroups": [],
   "id": "cvt_temp_public_id",
@@ -22,7 +22,7 @@ ___TEMPLATE_PARAMETERS___
 
 [
   {
-    "help": "Please provide the tracker id (also called Upx Id). If you have any questions, please contact support.",
+    "help": "Please provide the account id (also called advertiser Id). If you have any questions, please contact support.",
     "valueValidators": [
       {
         "type": "POSITIVE_NUMBER"
@@ -31,46 +31,52 @@ ___TEMPLATE_PARAMETERS___
         "type": "NON_EMPTY"
       }
     ],
-    "displayName": "Tracking Id",
+    "displayName": "Account Id",
     "simpleValueType": true,
-    "name": "fldTrackerId",
+    "name": "fldAccountId",
     "type": "TEXT"
   },
   {
-    "macrosInSelect": false,
+    "macrosInSelect": true,
     "selectItems": [
       {
-        "displayValue": "Home Page / All Pages",
-        "value": "home"
+        "displayValue": "Lead / Home Page",
+        "value": "Lead"
       },
       {
         "displayValue": "Cart",
-        "value": "cart"
+        "value": "Cart"
       },
       {
         "displayValue": "Sales confirmation",
-        "value": "sales_confirmation"
+        "value": "Sale"
       }
     ],
     "displayName": "Page Type",
     "simpleValueType": true,
     "name": "fldPageType",
-    "type": "SELECT"
+    "type": "SELECT",
+    "help": "Variable should return 'Lead', 'Cart' or 'Sale' based on the page type.",
+    "valueValidators": [
+      {
+        "type": "NON_EMPTY"
+      }
+    ]
   },
   {
-    "help": "Select the GTM Variable that returns the product Id of the current page. For multiple products at checkout, this should return a comma separated list and it should look like this: “product_id=1,2,3”",
-    "displayName": "Product Id",
+    "help": "Select the GTM Variable that returns the product ID(s) of the current page or in the cart. An Array Object e.g ['ProductID_1', 'ProductID_2', 'ProductID_3']. You may need to create a GTM variable, if it does not exist.",
+    "displayName": "Product Id(s)",
     "simpleValueType": true,
-    "name": "fldProductId",
+    "name": "fldProductIdList",
     "type": "TEXT"
   },
   {
-    "help": "The unique booking or order reference that identifies the transaction.",
+    "help": "The unique booking or order reference that identifies the transaction. You may need to create a GTM variable, if it does not exist.",
     "enablingConditions": [
       {
         "paramName": "fldPageType",
         "type": "EQUALS",
-        "paramValue": "sales_confirmation"
+        "paramValue": "Sale"
       }
     ],
     "valueValidators": [
@@ -84,12 +90,12 @@ ___TEMPLATE_PARAMETERS___
     "type": "TEXT"
   },
   {
-    "help": "The total booking or order value excluding any taxes, delivery and discounts.",
+    "help": "The total booking or order value excluding any taxes, delivery and discounts. You may need to create a GTM variable, if it does not exist.",
     "enablingConditions": [
       {
         "paramName": "fldPageType",
         "type": "EQUALS",
-        "paramValue": "sales_confirmation"
+        "paramValue": "Sale"
       }
     ],
     "valueValidators": [
@@ -140,7 +146,7 @@ ___WEB_PERMISSIONS___
             "listItem": [
               {
                 "type": 1,
-                "string": "https://*.provenpixel.com/ujs.php*"
+                "string": "https://*.provenpixel.com/adpx.php*"
               }
             ]
           }
@@ -168,16 +174,17 @@ const encodeUriComponent = require('encodeUriComponent');
 //log data, can be helpful for debugging
 log('data:' + data);
 
-// Get input data
-let pageType   = data.fldPageType;
-let uriComP    = data.fldProductId ? '&product_id=' + encodeUriComponent(data.fldProductId) : '';
+//build uri parts from user input
+let products   = data.fldProductIdList;
+let uriPt      = '&pt=' + data.fldPageType;
+let uriComP    = products ? '&product_id=' + encodeUriComponent(products.join()) : '';
 let uriCompOid = data.fldOrderId ? '&order_id=' + encodeUriComponent(data.fldOrderId): '';
 let uriCompOAm = data.fldOrderAmount ? '&order_amount=' + encodeUriComponent(data.fldOrderAmount): '';
 let uriCb      = '&cb=' + generateRandom(1, 999999);
 
 //assemble tag
-let url = 'https://upx.provenpixel.com/ujs.php?upx=' + data.fldTrackerId + uriComP;     
-if (pageType === 'sales_confirmation')
+let url = 'https://upx.provenpixel.com/adpx.php?clid=' + data.fldAccountId + uriPt + uriComP;     
+if (data.fldPageType === 'Sale')
 {
   url += uriCompOid + uriCompOAm + uriCb;
 } else {
