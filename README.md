@@ -70,4 +70,5 @@ Specify when the SoourceKnowledge tag should be fired on your website. Click on 
 ### 4. Preview & Publish
 Click on the preview button to test and preview this tag before setting it live. If the tag successfully fired publish the new changes to the workflow.
 
-More documentation about pixels provided here: http://www.sourceknowledge.com/help
+# More About SourceKnowledge Pixels
+Please visit: http://www.sourceknowledge.com/help
