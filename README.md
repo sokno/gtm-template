@@ -59,7 +59,7 @@ To create the variable in GTM, click on the Variables tab.
 #### Account Id and Page Type
 Create a constant type GTM variable with value as your accout or advertiser id and give it a name e.g. AccountId. Select this variable for Account Id field. Then select the Page Type from the drop down list.
 #### Data Layer Variables - Product(s), Order Id & Order Amount
-Create a data layer GTM variable. Input `orderId` defined in step 1 as `Data Layer Variable Name`. Select this variable for Account Id field. Follow this for other variables. 
+Create a data layer GTM variable. Input `orderId` defined in step 1 as `Data Layer Variable Name`. Select this variable for Order Id field. Follow this for other variables. 
 ### 4. Tag Configuration - Setup the Trigger
 Under `Triggering` choose the correct trigger type for the pixel such as all pages, cart page, conversion event, etc. Then click save.
 
