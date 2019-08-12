@@ -30,7 +30,6 @@ dataLayer.push({
 <script type="text/javascript">
 var dataLayer = dataLayer || [];
 dataLayer.push({
-'pageType':'Cart',
 'productIdList' : ['ProductID_1', 'ProductID_2', 'ProductID_3']
 });
 </script>
