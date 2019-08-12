@@ -67,4 +67,4 @@ More Information: https://support.google.com/tagmanager/topic/7679384?hl=en&ref_
 Click on the preview button to test and preview this tag before setting it live. If the tag successfully fired publish the new changes to the workflow.
 
 # More About SourceKnowledge Pixels
-Please visit: http://www.sourceknowledge.com/help
+Please visit: http://www.sourceknowledge.com/help#tab-pixel-setup
