@@ -1,7 +1,7 @@
 ___INFO___
 
 {
-  "displayName": "SourceKnowledge Tracking",
+  "displayName": "SourceKnowledge Tag",
   "description": "SourceKnowledge tag allows us to track what visitors to your website are doing.",
   "securityGroups": [],
   "id": "cvt_temp_public_id",
@@ -146,7 +146,7 @@ ___WEB_PERMISSIONS___
             "listItem": [
               {
                 "type": 1,
-                "string": "https://*.citeeze.com/adpx.php*"
+                "string": "https://*.provenpixel.com/adpx.php*"
               }
             ]
           }
@@ -183,7 +183,7 @@ let uriCompOAm = data.fldOrderAmount ? '&order_amount=' + encodeUriComponent(dat
 let uriCb      = '&cb=' + generateRandom(1, 999999);
 
 //assemble tag
-let url = 'https://lg.azhar-9.citeeze.com/adpx.php?clid=' + data.fldAccountId + uriPt + uriComP;     
+let url = 'https://upx.provenpixel.com/adpx.php?clientid=' + data.fldAccountId + uriPt + uriComP;     
 if (data.fldPageType === 'Sale')
 {
   url += uriCompOid + uriCompOAm + uriCb;
