@@ -1,4 +1,4 @@
-___INFO___
+﻿___INFO___
 
 {
   "displayName": "SourceKnowledge Tag",
@@ -170,9 +170,6 @@ const log                = require('logToConsole');
 const injectScript       = require('injectScript');
 const generateRandom     = require('generateRandom');
 const encodeUriComponent = require('encodeUriComponent');
-
-//log data, can be helpful for debugging
-log('data:' + data);
 
 //build uri parts from user input
 let products   = data.fldProductIdList;
