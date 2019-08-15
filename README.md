@@ -15,7 +15,7 @@ The Data layer is a javascript code snippet used to send information to Google T
 #### For Home Page/All Pages - Lead
 ```
 <script type="text/javascript">
-var dataLayer = dataLayer || [];
+var dataLayer = [];
 dataLayer.push({
 'productIdList' : ['ProductID_1', 'ProductID_2', 'ProductID_3']
 });
@@ -28,7 +28,7 @@ dataLayer.push({
 #### For Cart
 ```
 <script type="text/javascript">
-var dataLayer = dataLayer || [];
+var dataLayer = [];
 dataLayer.push({
 'productIdList' : ['ProductID_1', 'ProductID_2', 'ProductID_3']
 });
@@ -40,7 +40,7 @@ dataLayer.push({
 #### For Sales Confirmation
 ```
 <script type="text/javascript">
-var dataLayer = dataLayer || [];
+var dataLayer = [];
 dataLayer.push({
 'productIdList' : ['ProductID_1', 'ProductID_2', 'ProductID_3'],
 'orderId' : 'uq_order_id',
