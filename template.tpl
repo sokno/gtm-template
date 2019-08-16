@@ -2,7 +2,7 @@ ___INFO___
 
 {
   "displayName": "SourceKnowledge Tag",
-  "description": "SourceKnowledge tag allows us to track what visitors to your website are doing.",
+  "description": "This tag optimizes your SourceKnowledge campaigns for conversions across our shopping network.",
   "securityGroups": [],
   "id": "cvt_temp_public_id",
   "type": "TAG",
@@ -22,7 +22,7 @@ ___TEMPLATE_PARAMETERS___
 
 [
   {
-    "help": "Please provide the account id (also called advertiser Id). If you have any questions, please contact support.",
+    "help": "Please contact Sourceknowledge Support",
     "valueValidators": [
       {
         "type": "POSITIVE_NUMBER"
