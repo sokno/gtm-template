@@ -24,7 +24,7 @@ dataLayer.push({
   	...
 <!-- End Google Tag Manager -->
 ```
-
+Note: you can skip this if there is no product on the page. 
 #### For Cart
 ```
 <script type="text/javascript">
