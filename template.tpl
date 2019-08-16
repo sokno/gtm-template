@@ -31,7 +31,7 @@ ___TEMPLATE_PARAMETERS___
         "type": "NON_EMPTY"
       }
     ],
-    "displayName": "Account Id",
+    "displayName": "Account ID",
     "simpleValueType": true,
     "name": "fldAccountId",
     "type": "TEXT"
@@ -65,7 +65,7 @@ ___TEMPLATE_PARAMETERS___
   },
   {
     "help": "Select the GTM Variable that returns the product ID(s) of the current page or in the cart. An Array Object e.g ['ProductID_1', 'ProductID_2', 'ProductID_3']. You may need to create a GTM variable, if it does not exist.",
-    "displayName": "Product Id(s)",
+    "displayName": "Product ID(s)",
     "simpleValueType": true,
     "name": "fldProductIdList",
     "type": "TEXT"
@@ -84,7 +84,7 @@ ___TEMPLATE_PARAMETERS___
         "type": "NON_EMPTY"
       }
     ],
-    "displayName": "Order Id",
+    "displayName": "Order ID",
     "simpleValueType": true,
     "name": "fldOrderId",
     "type": "TEXT"
