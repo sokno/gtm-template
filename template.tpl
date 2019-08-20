@@ -172,15 +172,15 @@ const generateRandom     = require('generateRandom');
 const encodeUriComponent = require('encodeUriComponent');
 
 //build uri parts from user input
-let products   = data.fldProductIdList;
-let uriPt      = '&pt=' + data.fldPageType;
-let uriComP    = products ? '&product_id=' + encodeUriComponent(products.join()) : '';
+let uriAccId   = 'clientid=' + encodeUriComponent(data.fldAccountId);
+let uriPt      = '&pt=' + encodeUriComponent(data.fldPageType);
+let uriComP    = data.fldProductIdList ? '&product_id=' + encodeUriComponent(data.fldProductIdList.join()) : '';
 let uriCompOid = data.fldOrderId ? '&order_id=' + encodeUriComponent(data.fldOrderId): '';
 let uriCompOAm = data.fldOrderAmount ? '&order_amount=' + encodeUriComponent(data.fldOrderAmount): '';
 let uriCb      = '&cb=' + generateRandom(1, 999999);
 
 //assemble tag
-let url = 'https://upx.provenpixel.com/adpx.php?clientid=' + data.fldAccountId + uriPt + uriComP;     
+let url = 'https://upx.provenpixel.com/adpx.php?' + uriAccId + uriPt + uriComP;     
 if (data.fldPageType === 'Sale')
 {
   url += uriCompOid + uriCompOAm + uriCb;
