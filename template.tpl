@@ -1,8 +1,8 @@
-___INFO___
+﻿___INFO___
 
 {
-  "displayName": "SourceKnowledge Tag",
-  "description": "This tag optimizes your SourceKnowledge campaigns for conversions across our shopping network.",
+  "displayName": "SourceKnowledge Conversion Tag",
+  "description": "This tag optimizes your SourceKnowledge campaigns for conversions across our shopping network. For more information visit https://github.com/sokno/gtm-template",
   "securityGroups": [],
   "id": "cvt_temp_public_id",
   "type": "TAG",
@@ -22,7 +22,7 @@ ___TEMPLATE_PARAMETERS___
 
 [
   {
-    "help": "Please contact Sourceknowledge Support",
+    "help": "Use your account or advertiser ID. For help, please contact Sourceknowledge support.",
     "valueValidators": [
       {
         "type": "POSITIVE_NUMBER"
@@ -33,11 +33,11 @@ ___TEMPLATE_PARAMETERS___
     ],
     "displayName": "Account ID",
     "simpleValueType": true,
-    "name": "fldAccountId",
+    "name": "accountID",
     "type": "TEXT"
   },
   {
-    "help": "Variable should return 'Lead', 'Cart' or 'Sale' based on the page type.",
+    "help": "Select 'Lead', 'Cart' or 'Sale' based on the page type.",
     "macrosInSelect": false,
     "selectItems": [
       {
@@ -58,23 +58,23 @@ ___TEMPLATE_PARAMETERS___
         "type": "NON_EMPTY"
       }
     ],
-    "displayName": "Page Type",
+    "displayName": "Tracker Type",
     "simpleValueType": true,
-    "name": "fldPageType",
+    "name": "trackerType",
     "type": "SELECT"
   },
   {
     "help": "Select the GTM Variable that returns the product ID(s) of the current page or in the cart. An Array Object e.g ['ProductID_1', 'ProductID_2', 'ProductID_3']. You may need to create a GTM variable, if it does not exist.",
     "displayName": "Product ID(s)",
     "simpleValueType": true,
-    "name": "fldProductIdList",
+    "name": "productIdList",
     "type": "TEXT"
   },
   {
     "help": "The unique booking or order reference that identifies the transaction. You may need to create a GTM variable, if it does not exist.",
     "enablingConditions": [
       {
-        "paramName": "fldPageType",
+        "paramName": "trackerType",
         "type": "EQUALS",
         "paramValue": "Sale"
       }
@@ -86,14 +86,14 @@ ___TEMPLATE_PARAMETERS___
     ],
     "displayName": "Order ID",
     "simpleValueType": true,
-    "name": "fldOrderId",
+    "name": "orderID",
     "type": "TEXT"
   },
   {
     "help": "The total booking or order value excluding any taxes, delivery and discounts. You may need to create a GTM variable, if it does not exist.",
     "enablingConditions": [
       {
-        "paramName": "fldPageType",
+        "paramName": "trackerType",
         "type": "EQUALS",
         "paramValue": "Sale"
       }
@@ -105,7 +105,7 @@ ___TEMPLATE_PARAMETERS___
     ],
     "displayName": "Order Amount",
     "simpleValueType": true,
-    "name": "fldOrderAmount",
+    "name": "orderAmount",
     "type": "TEXT"
   }
 ]
@@ -172,16 +172,16 @@ const generateRandom     = require('generateRandom');
 const encodeUriComponent = require('encodeUriComponent');
 
 //build uri parts from user input
-let uriAccId   = 'clientid=' + encodeUriComponent(data.fldAccountId);
-let uriPt      = '&pt=' + encodeUriComponent(data.fldPageType);
-let uriComP    = data.fldProductIdList ? '&product_id=' + encodeUriComponent(data.fldProductIdList.join()) : '';
-let uriCompOid = data.fldOrderId ? '&order_id=' + encodeUriComponent(data.fldOrderId): '';
-let uriCompOAm = data.fldOrderAmount ? '&order_amount=' + encodeUriComponent(data.fldOrderAmount): '';
+let uriAccId   = 'clientid=' + encodeUriComponent(data.accountID);
+let uriPt      = '&pt=' + encodeUriComponent(data.trackerType);
+let uriComP    = data.productIdList ? '&product_id=' + encodeUriComponent(data.productIdList.join()) : '';
+let uriCompOid = data.orderID ? '&order_id=' + encodeUriComponent(data.orderID): '';
+let uriCompOAm = data.orderAmount ? '&order_amount=' + encodeUriComponent(data.orderAmount): '';
 let uriCb      = '&cb=' + generateRandom(1, 999999);
 
 //assemble tag
 let url = 'https://upx.provenpixel.com/adpx.php?' + uriAccId + uriPt + uriComP;     
-if (data.fldPageType === 'Sale')
+if (data.trackerType === 'Sale')
 {
   url += uriCompOid + uriCompOAm + uriCb;
 } else {
