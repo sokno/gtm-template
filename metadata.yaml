@@ -1,0 +1,5 @@
+homepage: "http://www.sourceknowledge.com",
+documentation: "https://github.com/sokno/gtm-template",
+versions:
+  - sha: 4a2062cdfd6ba556b2ebcda5c92f846fe28d7efc
+    changeNotes: First Version
