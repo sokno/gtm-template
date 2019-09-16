@@ -8,10 +8,10 @@ This is an official SourceKnowledge tracking script template for google tag mana
 # Integration Guide
 ### 1. Selecting SourceKnowledge Conversion Tag.
 - Log into Google Tag Manager. 
-- Goto `Tags` tab -> `New` -> `Tag Configuration` and search for `SourceKnowledge Conversion Tag` type.
+- Go to `Tags` tab -> `New` -> `Tag Configuration` and search for `SourceKnowledge Conversion Tag` type.
 
 ### 2. Create Data Layer
-The Data layer is a javascript code snippet used to send information to Google Tag Manager. This snippet should be placed directly on your website just before the GTM container snippet. E.g. 
+The Data layer is a JavaScript code snippet used to send information to Google Tag Manager. This snippet should be placed directly on your website just before the GTM container snippet. E.g. 
 #### For Home Page/All Pages - Lead
 ```
 <script type="text/javascript">
@@ -56,10 +56,10 @@ More Information about dataLayer: https://support.google.com/tagmanager/answer/6
 ### 3. Tag Configuration - Choose Variables
 To create the variable in GTM, click on the Variables tab. 
 #### Account Id and Tracker Type
-- Create a `constant` type GTM variable with value as your accout or advertiser id and give it a name e.g. AccountId. Select this variable for Account Id field. 
+- Create a `constant` type GTM variable with value as your account or advertiser id and give it a name e.g. AccountID. Select this variable for Account Id field. 
 - Then select the Tracker Type from the drop down list.
 #### Data Layer Variables - Product(s), Order Id & Order Amount
-Create a data layer GTM variable. Input `orderId` defined in step 1 as `Data Layer Variable Name`. Select this variable for Order Id field. Follow this for other variables. 
+Create a data layer GTM variable. Input `orderID` defined in step 1 as `Data Layer Variable Name`. Select this variable for Order Id field. Follow this for other variables. 
 ### 4. Tag Configuration - Setup the Trigger
 Under `Triggering` choose the correct trigger type for the pixel such as all pages, cart page, conversion event, etc. Then click save.
 
