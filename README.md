@@ -56,7 +56,7 @@ More Information about dataLayer: https://support.google.com/tagmanager/answer/6
 ### 3. Tag Configuration - Choose Variables
 To create the variable in GTM, click on the Variables tab. 
 #### Advertiser ID and Tracker Type
-- Create a `constant` type GTM variable with value as your Advertiser Id and give it a name e.g. AdvertiserID. Select this variable for Account Id field. 
+- Create a `constant` type GTM variable with value as your Advertiser ID and give it a name e.g. AdvertiserID. Select this variable for Advertiser ID field. 
 - Then select the Tracker Type from the drop down list.
 #### Data Layer Variables - Product(s), Order Id & Order Amount
 Create a data layer GTM variable. Input `orderID` defined in step 1 as `Data Layer Variable Name`. Select this variable for Order Id field. Follow this for other variables. 
