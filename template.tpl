@@ -22,7 +22,7 @@ ___TEMPLATE_PARAMETERS___
 
 [
   {
-    "help": "Use your account or advertiser ID. For help, please contact Sourceknowledge support.",
+    "help": "Use your <strong>Advertiser ID</strong>. For help, please contact <a href=\"http://www.sourceknowledge.com/contact\" target=\"_blank\">Sourceknowledge support</a>.",
     "valueValidators": [
       {
         "type": "POSITIVE_NUMBER"
@@ -31,13 +31,13 @@ ___TEMPLATE_PARAMETERS___
         "type": "NON_EMPTY"
       }
     ],
-    "displayName": "Account ID",
+    "displayName": "Advertiser ID",
     "simpleValueType": true,
-    "name": "accountID",
+    "name": "advertiserID",
     "type": "TEXT"
   },
   {
-    "help": "Select 'Lead', 'Cart' or 'Sale' based on the page type.",
+    "help": "Select <strong>Lead</strong>, <strong>Cart</strong> or <strong>Sale</strong> based on the page type.",
     "macrosInSelect": false,
     "selectItems": [
       {
@@ -64,14 +64,14 @@ ___TEMPLATE_PARAMETERS___
     "type": "SELECT"
   },
   {
-    "help": "Select the GTM Variable that returns the product ID(s) of the current page or in the cart. An Array Object e.g ['ProductID_1', 'ProductID_2', 'ProductID_3']. You may need to create a GTM variable, if it does not exist.",
+    "help": "Select the <strong>GTM Variable</strong> that returns the <strong>Product ID(s)</strong> of the current page or in the cart. An Array Object e.g <em>['ProductID_1', 'ProductID_2', 'ProductID_3']</em>. You may need to create a GTM Variable, if it does not exist.",
     "displayName": "Product ID(s)",
     "simpleValueType": true,
     "name": "productIdList",
     "type": "TEXT"
   },
   {
-    "help": "The unique booking or order reference that identifies the transaction. You may need to create a GTM variable, if it does not exist.",
+    "help": "The <strong>unique booking reference</strong> or <strong>order ID</strong> that identifies the transaction. You may need to create a GTM Variable, if it does not exist.",
     "enablingConditions": [
       {
         "paramName": "trackerType",
@@ -90,7 +90,7 @@ ___TEMPLATE_PARAMETERS___
     "type": "TEXT"
   },
   {
-    "help": "The total booking or order value excluding any taxes, delivery and discounts. You may need to create a GTM variable, if it does not exist.",
+    "help": "The <strong>total order value excluding any taxes, delivery and discounts</strong>. You may need to create a GTM Variable, if it does not exist.",
     "enablingConditions": [
       {
         "paramName": "trackerType",
@@ -172,7 +172,7 @@ const generateRandom     = require('generateRandom');
 const encodeUriComponent = require('encodeUriComponent');
 
 //build uri parts from user input
-let uriAccId   = 'clientid=' + encodeUriComponent(data.accountID);
+let uriAdvId   = 'clientid=' + encodeUriComponent(data.advertiserID);
 let uriPt      = '&pt=' + encodeUriComponent(data.trackerType);
 let uriComP    = data.productIdList ? '&product_id=' + encodeUriComponent(data.productIdList.join()) : '';
 let uriCompOid = data.orderID ? '&order_id=' + encodeUriComponent(data.orderID): '';
@@ -180,7 +180,7 @@ let uriCompOAm = data.orderAmount ? '&order_amount=' + encodeUriComponent(data.o
 let uriCb      = '&cb=' + generateRandom(1, 999999);
 
 //assemble tag
-let url = 'https://upx.provenpixel.com/adpx.php?' + uriAccId + uriPt + uriComP;     
+let url = 'https://upx.provenpixel.com/adpx.php?' + uriAdvId + uriPt + uriComP;     
 if (data.trackerType === 'Sale')
 {
   url += uriCompOid + uriCompOAm + uriCb;
