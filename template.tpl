@@ -7,7 +7,7 @@ By creating or modifying this file you agree to Google Tag Manager's Community T
 {
   "displayName": "SourceKnowledge Conversion Tag",
   "description": "This tag optimizes your SourceKnowledge campaigns for conversions across our shopping network. For more information visit https://github.com/sokno/gtm-template",
-  "categories": ["ADVERTISING", "ATTRIBUTION", "CONVERSION TRACKING"],
+  "categories": ["CONVERSION TRACKING", "ATTRIBUTION", "ADVERTISING"],
   "securityGroups": [],
   "id": "cvt_temp_public_id",
   "type": "TAG",
