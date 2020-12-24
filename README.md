@@ -5,6 +5,8 @@ This is an official SourceKnowledge tracking script template for Google Tag Mana
 * Order ID (required for sales confirmation)
 * Order Value (required for sales confirmation)
 
+You can find your Advertiser ID here: https://app.sourceknowledge.com/account/profile
+
 # Integration Guide
 ### 1. Selecting SourceKnowledge Conversion Tag.
 - Log into Google Tag Manager. 
