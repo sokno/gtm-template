@@ -4,6 +4,8 @@ This is an official SourceKnowledge tracking script template for Google Tag Mana
 * Product IDs
 * Order ID (required for sales confirmation)
 * Order Value (required for sales confirmation)
+* Email Hash (Email hash for uniquely identifying user)
+* User Id
 
 You can find your Advertiser ID here: https://app.sourceknowledge.com/account/profile
 
@@ -60,7 +62,7 @@ To create the variable in GTM, click on the Variables tab.
 #### Advertiser ID and Tracker Type
 - Create a `constant` type GTM variable with value as your Advertiser ID and give it a name e.g. AdvertiserID. Select this variable for Advertiser ID field. 
 - Then select the Tracker Type from the drop down list.
-#### Data Layer Variables - Product(s), Order Id & Order Amount
+#### Data Layer Variables - Product(s), Order Id, Order Amount, Email Hash and User Id
 Create a data layer GTM variable. Input `orderID` defined in step 1 as `Data Layer Variable Name`. Select this variable for Order Id field. Follow this for other variables. 
 ### 4. Tag Configuration - Setup the Trigger
 Under `Triggering` choose the correct trigger type for the tag such as lead/home pages, cart page, conversion event, etc. Then click save.
