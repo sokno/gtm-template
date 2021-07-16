@@ -1,5 +1,5 @@
 homepage: "http://www.sourceknowledge.com",
 documentation: "https://github.com/sokno/gtm-template",
 versions:
-  - sha: cfe835486f0d97832ce6e143b08534f151772422
-    changeNotes: Initial Production Release
+  - sha: 6e20368d7fdfce8ae04b2032d60076b5c983148d
+    changeNotes: Add option to provide Email Hash and UserId 
