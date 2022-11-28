@@ -2,9 +2,11 @@ homepage: "http://www.sourceknowledge.com",
 documentation: "https://github.com/sokno/gtm-template",
 versions:
   # Latest version
+  - sha: 98e9b725533bab17776bc31715f6b01929e113f6
+    changeNotes: Terms of services added
+  # Older versions
   - sha: 6e99c8cc8feb31aaf2de62c474b0689aadb49a1d
     changeNotes: Add option to provide customer type
-  # Older versions
   - sha: 6e20368d7fdfce8ae04b2032d60076b5c983148d
     changeNotes: Add option to provide Email Hash and UserId 
   - sha: 7d558e781ae3a44097d0c9a1e3e0fdf4e95893c1
