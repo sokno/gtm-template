@@ -124,6 +124,23 @@ ___TEMPLATE_PARAMETERS___
     "name": "userId",
     "displayName": "User Id",
     "simpleValueType": true
+  },
+  {
+    "type": "SELECT",
+    "name": "customerType",
+    "displayName": "Customer Type",
+    "macrosInSelect": false,
+    "selectItems": [
+      {
+        "value": "new",
+        "displayValue": "New"
+      },
+      {
+        "value": "old",
+        "displayValue": "Old"
+      }
+    ],
+    "simpleValueType": true
   }
 ]
 
@@ -146,10 +163,11 @@ let uriCompOid = data.orderID ? '&order_id=' + encodeUriComponent(data.orderID):
 let uriCompOAm = data.orderAmount ? '&order_amount=' + encodeUriComponent(data.orderAmount): '';
 let uriCompEh  = data.eHash ? '&ehash=' + encodeUriComponent(data.eHash): '';
 let uriCompUid = data.userId ? '&uid=' + encodeUriComponent(data.userId): '';
+let uriCompCuT = data.customerType ? '&customerType=' + encodeUriComponent(data.customerType): '';
 let uriCb      = '&cb=' + generateRandom(1, 999999);
 
 //assemble tag
-let url = 'https://upx.provenpixel.com/adpx.php?' + uriAdvId + uriPt + uriComP + uriCompEh + uriCompUid;     
+let url = 'https://upx.provenpixel.com/adpx.php?' + uriAdvId + uriPt + uriComP + uriCompEh + uriCompUid + uriCompCuT;     
 if (data.trackerType === 'Sale')
 {
   url += uriCompOid + uriCompOAm + uriCb;
