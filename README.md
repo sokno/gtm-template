@@ -6,6 +6,7 @@ This is an official SourceKnowledge tracking script template for Google Tag Mana
 * Order Value (required for sales confirmation)
 * Email Hash (Email hash for uniquely identifying user)
 * User Id
+* Customer Type (New or Old Customer)
 
 You can find your Advertiser ID here: https://app.sourceknowledge.com/account/profile
 
