@@ -132,11 +132,11 @@ ___TEMPLATE_PARAMETERS___
     "macrosInSelect": false,
     "selectItems": [
       {
-        "value": "new",
+        "value": 0,
         "displayValue": "New"
       },
       {
-        "value": "old",
+        "value": 1,
         "displayValue": "Old"
       }
     ],
@@ -163,7 +163,7 @@ let uriCompOid = data.orderID ? '&order_id=' + encodeUriComponent(data.orderID):
 let uriCompOAm = data.orderAmount ? '&order_amount=' + encodeUriComponent(data.orderAmount): '';
 let uriCompEh  = data.eHash ? '&ehash=' + encodeUriComponent(data.eHash): '';
 let uriCompUid = data.userId ? '&uid=' + encodeUriComponent(data.userId): '';
-let uriCompCuT = data.customerType ? '&customerType=' + encodeUriComponent(data.customerType): '';
+let uriCompCuT = data.customerType ? '&customer_type=' + encodeUriComponent(data.customerType): '';
 let uriCb      = '&cb=' + generateRandom(1, 999999);
 
 //assemble tag
